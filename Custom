@@ -1,0 +1,17 @@
+from cx_Freeze import setup, Executable
+
+# Dependencies are automatically detected, but it might need
+# fine tuning.
+buildOptions = dict(packages = [], excludes = [])
+
+base = 'Console'
+
+executables = [
+    Executable('C:\\Users\\Ali\\PycharmProjects\\DiscordPictureWizard1.0\\ClientUploader.py', base=base, targetName = 'ClientUploader.exe')
+]
+
+setup(name='ClientUploader',
+      version = '1.0',
+      description = '',
+      options = dict(build_exe = buildOptions),
+      executables = executables)
